@@ -1,0 +1,26 @@
+[2019-07-14 07:49:15,546]   INFO -  jetbrains.buildServer.STARTUP - Path to the startup configuration file: /opt/teamcity/bin/../conf/teamcity-startup.properties 
+[2019-07-14 07:49:15,607]   INFO -  jetbrains.buildServer.STARTUP - 
+
+
+
+
+
+ 
+[2019-07-14 07:49:15,610]   INFO -  jetbrains.buildServer.STARTUP - =========================================================== 
+[2019-07-14 07:49:15,611]   INFO -  jetbrains.buildServer.STARTUP - Starting TeamCity server 
+[2019-07-14 07:49:15,954]   INFO -  jetbrains.buildServer.STARTUP - TeamCity version: 10.0.1 (build 42078), data format version 787 
+[2019-07-14 07:49:15,994]   INFO -  jetbrains.buildServer.STARTUP - OS: Linux, User: root, Java: 1.8.0_91, Java HotSpot(TM) 64-Bit Server VM (25.91-b14, mixed mode), Java(TM) SE Runtime Environment (1.8.0_91-b14), Oracle Corporation 
+[2019-07-14 07:49:15,995]   INFO -  jetbrains.buildServer.STARTUP - JVM parameters: -Djava.util.logging.config.file=/opt/teamcity/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xmx512m -Dteamcity.configuration.path=../conf/teamcity-startup.properties -Dlog4j.configuration=file:/opt/teamcity/bin/../conf/teamcity-server-log4j.xml -Dteamcity_logs=../logs/ -Djava.awt.headless=true -Djava.endorsed.dirs=/opt/teamcity/endorsed -Dcatalina.base=/opt/teamcity -Dcatalina.home=/opt/teamcity -Djava.io.tmpdir=/opt/teamcity/temp 
+[2019-07-14 07:49:15,996]   INFO -  jetbrains.buildServer.STARTUP - Garbage collection: PS Scavenge, PS MarkSweep 
+[2019-07-14 07:49:15,998]   INFO -  jetbrains.buildServer.STARTUP - Web server version: Apache Tomcat/7.0.68 
+[2019-07-14 07:49:15,998]   INFO -  jetbrains.buildServer.STARTUP - Server IP address: 172.18.0.2 
+[2019-07-14 07:49:16,002]   INFO -  jetbrains.buildServer.STARTUP - Web server ports: 8111 (protocol: org.apache.coyote.http11.Http11NioProtocol, scheme: http), 8105 (shutdown port) 
+[2019-07-14 07:49:16,003]   INFO -  jetbrains.buildServer.STARTUP - TeamCity server work mode: Main TeamCity Server 
+[2019-07-14 07:49:16,008]   INFO -  jetbrains.buildServer.STARTUP - Version file lock was successfully obtained: /opt/teamcity/webapps/ROOT/BUILD_42078 
+[2019-07-14 07:49:16,015]   INFO -  jetbrains.buildServer.STARTUP - Servlet real path: /opt/teamcity/webapps/ROOT/ 
+[2019-07-14 07:49:16,021]   INFO -  jetbrains.buildServer.STARTUP - Current stage: Looking for the TeamCity Data Directory 
+[2019-07-14 07:49:16,022]   INFO -  jetbrains.buildServer.STARTUP - The TeamCity Data Directory path is determined using the environment variable TEAMCITY_DATA_PATH 
+[2019-07-14 07:49:16,032]   INFO -  jetbrains.buildServer.STARTUP - The TeamCity Data Directory "/data/teamcity_server/datadir" exists 
+[2019-07-14 07:49:16,038]   INFO -  jetbrains.buildServer.STARTUP - Asking user to confirm first start with the predefined TeamCity Data Directory path 
+[2019-07-14 07:49:16,039]   INFO -  jetbrains.buildServer.STARTUP - Startup confirmation is required. Open TeamCity web page in the browser 
+[2019-07-14 07:49:16,040]   INFO -  jetbrains.buildServer.STARTUP - Current stage: Confirming TeamCity first start (administrator login is required to proceed) 
