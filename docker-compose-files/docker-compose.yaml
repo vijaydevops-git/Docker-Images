@@ -6,6 +6,6 @@ services:
     balance-api:
         image:swarmgs/balance
     ports:
-            - 4000:3000
+        - 4000:3000
     environment:
-            MYWEB_CUSTOMER_API: customer-api:3000
+        MYWEB_CUSTOMER_API: customer-api:3000
