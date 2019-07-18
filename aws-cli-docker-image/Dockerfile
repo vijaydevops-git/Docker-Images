@@ -1,5 +1,5 @@
 FROM alpine:latest
-LABEL maintainer "Navaneeth Reddy Alavala <navaneethreddydevops@gmail.com>"
+LABEL maintainer "Navaneeth ReddyAlavala <navaneethreddydevops@gmail.com>"
 
 RUN apk --no-cache add \
 	ca-certificates \
