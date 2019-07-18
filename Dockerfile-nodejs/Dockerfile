@@ -1,5 +1,5 @@
 FROM amazon
-LABEL org.label-schema.version=v1.1
+LABEL org.mycustomcloud.version=v1.1
 RUN mkdir -p /var/node \
                         && apt-get install git -y\
                         && mkdir docker_images\
