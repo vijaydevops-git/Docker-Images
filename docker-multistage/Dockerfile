@@ -1,4 +1,5 @@
 FROM node as build
+RUN git clone https://github.com/linuxacademy/content-weather-app.git src
 RUN mkdir -p /var/node
 ADD src/ /var/node/
 WORKDIR /var/node
