@@ -1,0 +1,66 @@
+version: "3"
+services:
+    elasticsearch1:
+       image: docker.elastic.co/elasticsearch/elasticsearch:7.2.0
+       container_name: elasticsearch1
+       environment:
+          - node.name=elasticsearch1
+          - discovery.seed_hosts=elasticsearch2
+          - cluster.initial_master_nodes=elasticsearch1,elasticsearch2
+          - cluster.name=docker-cluster
+          - bootstrap.memory_lock=true
+          - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+       ulimits:
+         memlock:
+         soft: -1
+         hard: -1
+         volumes:
+            - esdata01:/usr/share/elasticsearch/data
+         ports:
+            - 9200:9200
+         networks:
+            - esnet
+    elasticsearch2:
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.2.0
+        container_name: elasticsearch2
+        environment:
+            - node.name=elasticsearch2
+            - discovery.seed_hosts=elasticsearch1
+            - cluster.initial_master_nodes=elasticsearch1,elasticsearch2
+            - cluster.name=docker-cluster
+            - bootstrap.memory_lock=true
+            - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+        ulimits:
+          memlock:
+          soft: -1
+          hard: -1
+          volumes:
+            - esdata02:/usr/share/elasticsearch/data
+        networks:
+            - esnet
+
+        volumes:
+          esdata01:
+            driver: local
+          esdata02:
+            driver: local
+
+    kibana:
+    # replace username/repo:tag with your name and image details
+    image: 
+    volumes:
+      - ./kibana.yml:/usr/share/kibana/config/kibana.yml
+    deploy:
+      replicas: 100
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "4000:80"
+    networks:
+      - kibana
+networks:
+  kibana:
